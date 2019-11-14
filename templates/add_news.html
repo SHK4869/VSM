@@ -1,0 +1,42 @@
+
+{% extends 'player_base.html' %}
+{% block body %}
+<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<form action="{{url_for('player_buy', idd='new')}}" method="POST">
+					<div class = "row">
+			
+						<div class="col-md-4" id="12">
+								<!-- PANEL DEFAULT -->
+								<a href="#">
+								<div class="panel" >
+									
+										<p><ul>
+													<li>News
+														
+															<div class="input-group">
+																	<textarea class="form-control" type="text" value="4">
+																</div>
+													
+										</ul></p>
+									
+								</div>
+							</a>
+								<!-- END PANEL DEFAULT -->
+							</div>		
+					</div>
+					<a href="">
+						<button type="submit demo-btn button" class="btn btn-success"><i class="fa fa-check-circle"></i>SAVE</button>
+					</a>
+							
+					</form>
+					</div>
+					
+					
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+{% endblock %}

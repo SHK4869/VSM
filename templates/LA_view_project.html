@@ -1,0 +1,166 @@
+
+{% extends 'teacher_base.html' %}
+{% block body %}
+<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<div class = "row">
+						<div class="col-md-8">
+							<div class="panel">
+								<div class="panel panel-headline">
+									<div class="panel-heading">
+										<h3 class="panel-title">{{ form['Title'] }}</h3>
+										<p class="panel-subtitle">{{ form['Duration'] }}
+										</p>
+										<h4>{{ form['Description'] }}</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="panel" >
+								<div class="panel panel-headline" >
+									<div class="panel-heading" style="padding-left: 1px">
+										
+										
+										<h4>
+											<ul>
+												<li>{{ form['Date'] }}</li>
+												<li>{{ form['Professor'] }}</li>
+												<li>Students
+													<ul>
+														<li>{{ form['Student1'] }}</li>
+														<li>{{ form['Student2'] }}</li>
+														<li>{{ form['Student3'] }}</li>
+													</ul>
+
+												</li>
+
+											</ul>
+										</h4>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+					
+					<a href="LA_project_edit" ><button type="submit demo-btn button" class="btn btn-success"><i class="fa fa-check-circle"></i> EDIT</button></a>
+					<div class="row">
+						<div class="col-md-5">
+							<!-- RECENT PURCHASES -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Status</h3>
+									<div class="right">
+										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
+									</div>
+								</div>
+								<div class="panel-body no-padding">
+									<table class="table table-striped">
+										<thead>
+											<tr>
+												<th>Module</th>												
+												<th>Total marks</th>
+												<th>Marks Given</th>
+												<th>Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>{{ form['Status1'] }}</th>												
+												<td>{{ form['Status1_Date'] }}</td>
+												<th>{{ form['Status1_marks'] }}</th>
+												<td><span class="label label-warning">PENDING</span></td>
+											</tr>
+											<tr>
+												<th>{{ form['Status2'] }}</th>												
+												<td>{{ form['Status2_Date'] }}</td>
+												<th>{{ form['Status2_marks'] }}</th>
+												<td><span class="label label-warning">PENDING</span></td>
+											</tr>
+											<tr>
+												<th>{{ form['Status3'] }}</th>												
+												<td>{{ form['Status3_Date'] }}</td>
+												<th>{{ form['Status3_marks'] }}</th>
+												<td><span class="label label-warning">PENDING</span></td>
+											</tr>
+											<tr>
+												<th>{{ form['Status4'] }}</th>												
+												<td>{{ form['Status4_Date'] }}</td>
+												<th>{{ form['Status4_marks'] }}</th>
+												<td><span class="label label-warning">PENDING</span></td>
+											</tr>
+											<tr>
+												<th>{{ form['Status5'] }}</th>												
+												<td>{{ form['Status5_Date'] }}</td>
+												<th>{{ form['Status5_marks'] }}</th>
+												<td><span class="label label-warning">PENDING</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+							<!-- END RECENT PURCHASES -->
+							<div class="col-md-7">
+								<div class="panel">
+									<div class="panel-heading">
+										<h3 class="panel-title">To-Do List</h3>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+											<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<ul class="list-unstyled todo-list">
+											<li>
+												<p>
+													<span class="title">{{ form['Task1'] }}</span>
+													<span class="short-description">{{ form['Task1_des'] }} </span>
+													<span class="date">{{ form['Task1_date'] }}</span>
+												</p>
+												<div class="controls">
+													<a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
+												</div>
+											</li>
+
+											<li>
+												
+												<p>
+													<span class="title">{{ form['Task2'] }}</span>
+													<span class="short-description">{{ form['Task2_des'] }} </span>
+													<span class="date">{{ form['Task2_date'] }}</span>
+												</p>
+												<div class="controls">
+													<a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
+												</div>
+											</li>
+											<li>
+												
+												<p>
+													<span class="title">{{ form['Task3'] }}</span>
+													<span class="short-description">{{ form['Task3_des'] }} </span>
+													<span class="date">{{ form['Task3_date'] }}</span>
+												</p>
+												<div class="controls">
+													<a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
+												</div>
+											</li>
+											
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+						
+					</div>
+					
+					
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+{% endblock %}

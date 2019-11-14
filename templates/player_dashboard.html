@@ -1,0 +1,66 @@
+{% extends 'player_base.html' %}
+
+{% block body %}
+<div class="main" style="align-content: center;" >
+			<!-- MAIN CONTENT -->
+			<div class="main-content" >
+				<div class="container-fluid" >
+					<h3 class="page-title">MARKET</h3>
+					<div class="row" >
+						{% for x in data['stocks'] %}
+						<div class="col-md-4" id="12">
+							<!-- PANEL DEFAULT -->
+							<a href="{{url_for('player_buy', idd = x['Stock_ID'])}}">
+							<div class="panel" id = "x">
+							
+								<div class="panel-heading">
+									<h3 class="panel-title">Company: {{ x['Stock_Name'] }}</h3>
+								</div>
+								<div class="panel-body">
+									<p><ul>
+												<li>Stock ID: {{ x['Stock_ID'] }}</li>
+												<li>Number of stocks avaiable: {{ x['Stock_Amount'] }}</li>
+												<li>Price of 1 stock: {{ x['Stock_Price'] }}</li>
+												<li>Previous price of stock: {{ x['previous_price'] }}</li>
+									</ul></p>
+								</div>
+							</div>
+						</a>
+							<!-- END PANEL DEFAULT -->
+						</div>						
+						{% endfor %}
+						
+
+					</div>
+					<h3 class="page-title">MY STOCKS</h3>
+					<div class="row" >
+						{% for x in data['player_stocks'] %}
+						<div class="col-md-4" id="12">
+							<!-- PANEL DEFAULT -->
+							<a href="{{url_for('player_buy', idd = x['Stock_ID'])}}">
+							<div class="panel" >
+									
+								<div class="panel-heading">
+									<h3 class="panel-title">Company: {{ x['Stock_ID'] }}</h3>
+								</div>
+								<div class="panel-body">
+									<p><ul>
+												<li>Trxn ID: {{ x['Transaction_ID'] }}</li>
+												<li>Number of stocks bought: {{ x['Amount'] }}</li>
+												<li>Price of 1 stock at that time: {{ x['Price'] }}</li>
+									</ul></p>
+								</div>
+							</div>
+						</a>
+							<!-- END PANEL DEFAULT -->
+						</div>						
+						{% endfor %}
+						
+
+					</div>
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+</div>
+		<!-- END MAIN -->
+{% endblock %}

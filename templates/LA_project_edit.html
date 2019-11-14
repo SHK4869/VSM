@@ -1,0 +1,70 @@
+
+{% extends 'LA_base.html' %}
+{% block body %}
+<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<form action="{{url_for('LA_view_project', idd='new')}}" method="POST">
+					<div class = "row">
+						<div class="col-md-8">
+							<div class="panel">
+								<div class="panel panel-headline">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<li>
+												<div class="input-group">
+													<input class="form-control" placeholder="Project Title" name="Title" type="text" value="{{ form['Title'] }}">
+												</div>
+											</li>
+										</h3>
+										<p class="panel-subtitle">
+											<li>
+
+												<div class="input-group">
+													<input class="form-control" placeholder="Period" name="Duration" type="text" value="{{ form['Duration'] }}">
+												</div>
+											</li>
+										</p>
+										<h4><textarea placeholder="Project Description" rows="5" cols="70" name="Description"></textarea>{{ form['Description'] }}</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4" id="12">
+								<!-- PANEL DEFAULT -->
+								<a href="{{url_for('player_sell', idd = x['Stock_ID'])}}">
+								<div class="panel" >
+										
+									<div class="panel-heading">
+										<h3 class="panel-title">Company: {{ x['Stock_ID'] }}</h3>
+									</div>
+									<div class="panel-body">
+										<p><ul>
+													<li>Number of stocks bought: 
+														
+															<div class="input-group">
+																	<input class="form-control" placeholder="Period" name="Duration" type="text" value="{{ form['Duration'] }}">
+																</div>
+													</li>
+													<li>Price of 1 stock at that time: {{ x['Price'] }}</li>
+										</ul></p>
+									</div>
+								</div>
+							</a>
+								<!-- END PANEL DEFAULT -->
+							</div>		
+					</div>
+					<a href="">
+						<button type="submit demo-btn button" class="btn btn-success"><i class="fa fa-check-circle"></i>SAVE</button>
+					</a>
+							
+					</form>
+					</div>
+					
+					
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+{% endblock %}

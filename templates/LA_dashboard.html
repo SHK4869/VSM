@@ -1,0 +1,46 @@
+
+{% extends 'LA_base.html' %}
+
+{% block body %}
+<div class="main" style="align-content: center;" >
+			<!-- MAIN CONTENT -->
+			<div class="main-content" >
+				<div class="container-fluid" >
+					<h3 class="page-title">ADD TIMETABLE</h3>
+					<div class="row" >
+						{% for x in data %}
+						<div class="col-md-4" id="12">
+							<!-- PANEL DEFAULT -->
+							<a href="{{url_for('LA_view_project', idd = x['Title'])}}">
+							<div class="panel" style="background-color: lightgreen;">
+								<div class="panel-heading">
+									<h3 class="panel-title">{{ x['Title'] }}</h3>
+									
+								</div>
+								<div class="panel-body">
+									<p><ul>
+												<li>{{ x['Date'] }}</li>
+												<li>{{ x['Professor'] }}</li>
+												<li>Students
+													<ul>
+														<li>{{ x['Student1'] }}</li>
+														<li>{{ x['Student2'] }}</li>
+														<li>{{ x['Student3'] }}</li>
+													</ul>
+
+												</li>
+
+											</ul></p>
+								</div>
+							</div>
+						</a>
+							<!-- END PANEL DEFAULT -->
+						</div>						
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+</div>
+		<!-- END MAIN -->
+{% endblock %}

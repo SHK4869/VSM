@@ -1,0 +1,47 @@
+
+{% extends 'player_base.html' %}
+{% block body %}
+<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<form action="{{url_for('player_buy', idd='new')}}" method="POST">
+					<div class = "row">
+			
+						<div class="col-md-4" id="12">
+								<!-- PANEL DEFAULT -->
+								<a href="#">
+								<div class="panel" >
+										
+									<div class="panel-heading">
+										<h3 class="panel-title">Company: Asian Paints</h3>
+									</div>
+									<div class="panel-body">
+										<p><ul>
+													<li>Number of stocks bought: 
+														
+															<div class="input-group">
+																	<input class="form-control" type="text" value="4">
+																</div>
+													</li>
+													<li>Price of 1 stock at that time: 10 </li>
+										</ul></p>
+									</div>
+								</div>
+							</a>
+								<!-- END PANEL DEFAULT -->
+							</div>		
+					</div>
+					<a href="">
+						<button type="submit demo-btn button" class="btn btn-success"><i class="fa fa-check-circle"></i>SAVE</button>
+					</a>
+							
+					</form>
+					</div>
+					
+					
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+{% endblock %}
